@@ -3,7 +3,7 @@ var generateBtn = document.querySelector("#generate");
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var numbers = "0123456789";
-var specialCharacters = "!@#$%^&*()_+";
+var specialCharacters = "'-<>[]{}~!@#$%^&*()_+";
 
 // Write password to the #password input
 function writePassword() {
