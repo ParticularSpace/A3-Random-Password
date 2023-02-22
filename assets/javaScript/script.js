@@ -24,14 +24,14 @@ function generatePassword() {
     return '';
   }
   //Alerts to chosen password length if chosen length is between 8 and 128
-  alert('You chose ' + passwordSize + ' characters!');
+  // alert('You chose ' + passwordSize + ' characters!');
   //Confirm choices and assigns a true or false value based on user input
   var bigCase = confirm('Include uppercase letters ("Ok" to confirm, "Cancel" to deny)?');
   var smallCase = confirm('Include lowercase letters ("Ok" to confirm, "Cancel" to deny)?');
   var numeric = confirm('Include numbers ("Ok" to confirm, "Cancel" to deny)?');
   var special = confirm('Include special characters ("Ok" to confirm, "Cancel" to deny)?');
   //check user choices if all section are left empty reset
-  if (bigCase === false && smallCase === false && numeric === false && special === false) {
+  if (bigCase + smallCase + numeric + special < 1) {
     alert('Must select at least ONE option.');
     return '';
   }
@@ -40,19 +40,19 @@ function generatePassword() {
   //Check user choices again for true values if true assign new chosen variable to userChoiceCharacter
   if (bigCase === true) {
     userChoiceCharacter += upperCase;
-    alert('Uppercase has been added!');
+    // alert('Uppercase has been added!');
   }
   if (smallCase === true) {
     userChoiceCharacter += lowerCase;
-    alert('Lowercase has been added!');
+    // alert('Lowercase has been added!');
   }
   if (numeric === true) {
     userChoiceCharacter += numbers;
-    alert('Numbers have been added!');
+    // alert('Numbers have been added!');
   }
   if (special === true) {
     userChoiceCharacter += specialCharacters;
-    alert('Special characters have been added!');
+    // alert('Special characters have been added!');
   }
   //Create our password variable that is going to put out our randomly generated password
   var password = "";
